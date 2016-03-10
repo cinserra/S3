@@ -1,0 +1,83 @@
+v.1.1.0 -- 20151029
+
+GENERAL:
+- Introduced the errors on all the programmes:
+	> SNAKE: the final error is the r.m.s of the errors on the redshift, on the zero points of the observed and rest-frame filter and on the assumption that the missing part of the spectrum is similar to a black-body in the case such function is used
+	> SNAKELOOP: the final error is the r.m.s of the errors on the redshift, on the zero points of the observed and rest-frame filter and on the assumption that the missing part of the spectrum is similar to a black-body in the case such function is used
+	> SMS: the final error is the r.m.s of the errors on the zero points of the filter and on the assumption that the missing part of the spectrum is similar to a black-body in the case such function is used
+	> SNAP: the final error is the r.m.s of the errors on the zero points of the filter and of the instrumental passband and on the assumption that the missing part of the spectrum is similar to a black-body in the case such function is used
+- Added the option to modify the pre-set errors on the redshift for SNAKE and SNAKE loop (-r or --redshifterr)
+- Added the function conv (it does the convolution) in the utilities to lighten the code and avoid variables to be overwritten
+- Added the option to change your sleeping time between cycles with the option -s or --sleep for SNAKELOOP, SNAP and SMS
+- Added a safety loop to be sure that your file are removed from a cycle to another in SNAKELOOP, SNAP and SMS
+- Added a timer in SNAKELOOP, SNAP and SMS
+- Added the reference for citation in the case you use the S3 package and find it useful
+- Updated the usage instructions on the README file
+- Updated the acknowledgement section in the README
+
+SNAKE:
+- Fixed a problem in the convolution of the specTOspec part regarding the reddened spectrum
+- Changed the written part about the errors.
+
+SNAKELOOP:
+- Fixed a problem in the convolution of the specTOspec part regarding the reddened spectrum
+- Fixed a known bag for the application of the host reddening
+- Fixed a bug related to the evaluation of the black-body for rest-frame spectra
+- Fixed a bug in the specTOspec array for the K-corrections
+- Added the option to turn down the plot
+- Added a line that specifies as K-corrections on hybrid spectra are calculated without the reddening. This is due to the higher propagation of the errors that the program does not handle yet.
+- Added the unlearn dopcor, deredden and scopy to be sure that IRAF is working properly
+- Added a warning about the correct usage of K-correction
+- Removed some printing commands in the specTospec section
+
+SNAP:
+- Added the white band of PS1 and the ASIAGO telescope
+- Fixed the plot with the correct telescopes
+- Updated the zero point of the zs filter of Pan-STARSS
+
+SMS:
+- Fixed a bug for storing the magnitude in case of NIR filters or filters bluer than U
+
+-------------------------------
+v1.0.2 -- 20150601
+
+GENERAL:
+- Introduced the STHREE programme, which is a general programme collecting all the others and their usage
+
+SNAKELOOP, SNAP and SMS:
+- Added a sleeping time to allow the computer to remove all the files before the new cycle. Previously that caused some files to be overwritten and as a consequence incorrect results for the K-correction.
+
+SNAP:
+- Added PS1, OGLE and SKYMAPPER
+- Added a plot of your results
+
+------------------------------
+v1.0.1 -- 20150304
+
+GENERAL:
+- Fixed the programme version, which it was in conflict with the IRAF version
+- Introduced the utilities file with the Black-body function and an alternative script to evaluate reddening without IRAF (still not implemented)
+- Introduced OptioParser to give the user the possibility to have the help and the verbose command for ALL the scripts with the command line
+- Introduced the fileName,fileExtension task, which recognizes automatically the extension of your file and convert to fits
+- Added a line at the end of each programme to summarise the results and give information on the text file created storing all the information
+- Added the installation procedure (and the remove procedure) in the README
+- Added rcParams for a pre-set size of the plotting windows
+
+SNAKE:
+- introduced a recap of the input information
+
+SNAKELOOP:
+- Fixed a problem with deredden in IRAF
+
+SNAP:
+- Added LT, LSQ, TNG and NOT to the list
+
+-------------------------------
+v1.0.0 -- 20150109
+
+Initial release.
+Beta testers: Elisabeth Gall, Joe Polshaw, Ting-Wan Chen (PhD students at Queen's University Belfast)
+Alpha testers: Elisabeth Gall, Joe Polshaw and Erkki Kankare (Research Fellow at Queen's University Belfast)
+
+Acknowledgements
+I am indebted to David Young and Ken Smith for their assistance with Python and to E. Gall for testing and debugging the most chaotic script an astronomer has ever seen
