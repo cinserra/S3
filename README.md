@@ -82,3 +82,33 @@ The Synthetic Magnitudes from Spectra (S.M.S.) code is a python version,
 IRAF-free, of the STSDAS/HST tool calcphot. It works with .fits and it
 will plot the values and create a text file with all the relevant 
 information.
+
+# Reference
+
+If you make use of this code, please cite the paper (Inserra et al. 2018, MNRAS, 465, 1046 - DOI:10.1093/mnras/stx3179 ), which is currently on the ADS at [this link](http://adsabs.harvard.edu/abs/2018MNRAS.475.1046I):
+
+```
+@ARTICLE{2018MNRAS.475.1046I,
+   author = {{Inserra}, C. and {Smartt}, S.~J. and {Gall}, E.~E.~E. and {Leloudas}, G. and 
+	{Chen}, T.-W. and {Schulze}, S. and {Jerkstrand}, A. and {Nicholl}, M. and 
+	{Anderson}, J.~P. and {Arcavi}, I. and {Benetti}, S. and {Cartier}, R.~A. and 
+	{Childress}, M. and {Della Valle}, M. and {Flewelling}, H. and 
+	{Fraser}, M. and {Gal-Yam}, A. and {Guti{\'e}rrez}, C.~P. and 
+	{Hosseinzadeh}, G. and {Howell}, D.~A. and {Huber}, M. and {Kankare}, E. and 
+	{Kr{\"u}hler}, T. and {Magnier}, E.~A. and {Maguire}, K. and 
+	{McCully}, C. and {Prajs}, S. and {Primak}, N. and {Scalzo}, R. and 
+	{Schmidt}, B.~P. and {Smith}, M. and {Smith}, K.~W. and {Tucker}, B.~E. and 
+	{Valenti}, S. and {Wilman}, M. and {Young}, D.~R. and {Yuan}, F.
+	},
+    title = "{On the nature of hydrogen-rich superluminous supernovae}",
+  journal = {\mnras},
+ keywords = {circumstellar matter, stars: magnetars, supernovae: general, supernovae: individual: SN2103hx, supernovae: individual: PS15br, supernovae: individual: SN2008es},
+     year = 2018,
+    month = mar,
+   volume = 475,
+    pages = {1046-1072},
+      doi = {10.1093/mnras/stx3179},
+   adsurl = {http://adsabs.harvard.edu/abs/2018MNRAS.475.1046I},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+```
